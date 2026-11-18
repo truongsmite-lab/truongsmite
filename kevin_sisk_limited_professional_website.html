@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Sisk Limited | Corporate Consulting & Professional Services</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        corporate: {
+                            50: '#f0f6ff',
+                            100: '#e0eefd',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- Notification Modal for Form Submission -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-32 opacity-0 transition-all duration-300 bg-slate-900 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center space-x-3 border border-slate-700">
+        <div class="text-emerald-400 text-xl"><i class="fa-solid fa-circle-check"></i></div>
+        <div>
+            <h4 class="font-semibold text-sm">Message Received</h4>
+            <p id="toast-msg" class="text-xs text-slate-300">Thank you for reaching out to Kevin Sisk Limited.</p>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-700 to-indigo-900 flex items-center justify-center text-white font-bold text-xl shadow-md">
+                    KS
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-slate-900 tracking-tight block leading-none">Kevin Sisk Limited</span>
+                    <span class="text-xs text-slate-500 font-medium">Entity ID: # 20248265026</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-blue-600 transition-colors">About Us</a>
+                <a href="#services" class="hover:text-blue-600 transition-colors">Services</a>
+                <a href="#credentials" class="hover:text-blue-600 transition-colors">Credentials</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-all shadow-sm">Client Portal</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 hover:text-blue-600 focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-3 shadow-lg">
+            <a href="#about" class="block text-sm font-medium text-slate-700 hover:text-blue-600">About Us</a>
+            <a href="#services" class="block text-sm font-medium text-slate-700 hover:text-blue-600">Services</a>
+            <a href="#credentials" class="block text-sm font-medium text-slate-700 hover:text-blue-600">Credentials</a>
+            <a href="#contact" class="block text-center w-full py-2 rounded-lg bg-blue-600 text-white font-medium text-sm">Client Portal</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white py-24 lg:py-32">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold mb-6 uppercase tracking-wider">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Colorado Limited Liability Company</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    Strategic Excellence & Enterprise Solutions
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+                    Kevin Sisk Limited delivers high-caliber corporate consulting, executive management solutions, and bespoke strategic growth planning for forward-thinking organizations.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/30">
+                        Schedule Consultation <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#services" class="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-slate-800 border border-slate-700 text-slate-200 font-semibold hover:bg-slate-700 transition-all">
+                        Explore Services
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Company Badge Grid -->
+            <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 border-t border-slate-800">
+                <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg bg-blue-600/20 text-blue-400 text-xl">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium">Entity Identification</p>
+                        <p class="text-base font-semibold text-white">ID # 20248265026</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg bg-blue-600/20 text-blue-400 text-xl">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium">Principal Office</p>
+                        <p class="text-base font-semibold text-white">517 57th St, Brooklyn, NY</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="p-3 rounded-lg bg-blue-600/20 text-blue-400 text-xl">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-slate-400 font-medium">Registered Agent</p>
+                        <p class="text-base font-semibold text-white">Kevin Sisk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Corporate Profile</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">
+                        Built on Integrity, Driven by Strategic Vision
+                    </h3>
+                    <p class="text-slate-600 text-base leading-relaxed mb-6">
+                        Kevin Sisk Limited is a formally established Colorado Limited Liability Company committed to providing exemplary professional services, business consulting, and leadership guidance. We partner with commercial clients to navigate complex market dynamics, optimize operational frameworks, and achieve sustainable growth.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 text-blue-600"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Registered Compliance & Standards</h4>
+                                <p class="text-sm text-slate-500">Formed pursuant to Colorado statutes with full legal transparency and registered representation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="mt-1 text-blue-600"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Tailored Advisory Solutions</h4>
+                                <p class="text-sm text-slate-500">Every client engagement is customized to align with unique business models and corporate targets.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-slate-100 p-8 rounded-2xl border border-slate-200 shadow-inner">
+                    <h4 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                        <i class="fa-solid fa-id-card text-blue-600 mr-3"></i> Official Registration Details
+                    </h4>
+                    <ul class="space-y-4 text-sm text-slate-700">
+                        <li class="flex justify-between py-3 border-b border-slate-200">
+                            <span class="font-medium text-slate-500">Entity Name:</span>
+                            <span class="font-semibold text-slate-900">Kevin Sisk Limited</span>
+                        </li>
+                        <li class="flex justify-between py-3 border-b border-slate-200">
+                            <span class="font-medium text-slate-500">Jurisdiction:</span>
+                            <span class="font-semibold text-slate-900">State of Colorado (LLC)</span>
+                        </li>
+                        <li class="flex justify-between py-3 border-b border-slate-200">
+                            <span class="font-medium text-slate-500">Entity ID:</span>
+                            <span class="font-semibold text-blue-600 font-mono">20248265026</span>
+                        </li>
+                        <li class="flex justify-between py-3 border-b border-slate-200">
+                            <span class="font-medium text-slate-500">Principal Office:</span>
+                            <span class="font-semibold text-slate-900 text-right">517 57th St, Brooklyn, NY 11220</span>
+                        </li>
+                        <li class="flex justify-between py-3">
+                            <span class="font-medium text-slate-500">Registered Agent:</span>
+                            <span class="font-semibold text-slate-900">Kevin Sisk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Our Core Expertise</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Professional Services Portfolio</h3>
+                <p class="text-slate-600 mt-4 text-base">Comprehensive consulting and strategic management services designed to elevate business performance.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Business Consulting</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Expert advisory services focused on operational efficiency, process optimization, risk mitigation, and scaling enterprise value.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500">
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Operational Audits</li>
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Performance Benchmarking</li>
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Process Re-engineering</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-chess"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Strategic Planning</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Long-term growth strategies, roadmap development, market positioning, and executive guidance to navigate competitive landscapes.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500">
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Vision & Roadmap Formulation</li>
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Market Entry Strategies</li>
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Competitive Analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-all group">
+                    <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Management Solutions</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        Executive oversight, project governance, change management frameworks, and leadership support for complex initiatives.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-500">
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Executive Leadership Support</li>
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Change Management</li>
+                        <li><i class="fa-solid fa-check text-blue-600 mr-2"></i> Resource Allocation & Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credentials & Verification Section -->
+    <section id="credentials" class="py-20 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Transparency & Compliance</h2>
+            <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-6">Official State Standing</h3>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-12 text-base">
+                Kevin Sisk Limited operates in full accordance with the Colorado Revised Statutes (C.R.S.). Verified records are accessible through the Colorado Secretary of State filing registry.
+            </p>
+            <div class="inline-flex flex-col sm:flex-row items-center justify-center bg-slate-900 text-white px-8 py-6 rounded-2xl shadow-xl space-y-4 sm:space-y-0 sm:space-x-8">
+                <div class="flex items-center space-x-3">
+                    <i class="fa-solid fa-certificate text-3xl text-blue-400"></i>
+                    <div class="text-left">
+                        <p class="text-xs text-slate-400">Filing Status</p>
+                        <p class="font-bold text-base">Active & In Good Standing</p>
+                    </div>
+                </div>
+                <div class="hidden sm:block h-10 w-px bg-slate-700"></div>
+                <div class="text-left">
+                    <p class="text-xs text-slate-400">Articles of Organization</p>
+                    <p class="font-bold text-base font-mono">C.R.S. § 7-90-301 & § 7-80-204</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-3">Get in Touch</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-6">Let’s Discuss Your Next Strategic Initiative</h3>
+                    <p class="text-slate-600 text-base mb-8 leading-relaxed">
+                        Whether you require specialized business consulting or enterprise management solutions, our team is prepared to assist you. Contact us directly or fill out the form.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-600 text-white rounded-lg shadow-sm">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Principal Office Address</h4>
+                                <p class="text-sm text-slate-600">517 57th St, Brooklyn, NY 11220, US</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-600 text-white rounded-lg shadow-sm">
+                                <i class="fa-solid fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Registered Agent</h4>
+                                <p class="text-sm text-slate-600">Kevin Sisk (Colorado / New York)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3 bg-blue-600 text-white rounded-lg shadow-sm">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-900">Corporate Inquiries</h4>
+                                <p class="text-sm text-slate-600">contact@kevinsisklimited.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-200">
+                    <form id="consultation-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Full Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-slate-800 text-sm transition-all" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Corporate Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-slate-800 text-sm transition-all" placeholder="john@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Service of Interest</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-slate-800 text-sm bg-white transition-all">
+                                <option>Business Consulting</option>
+                                <option>Strategic Planning</option>
+                                <option>Management Solutions</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-2">Project Details / Message</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 outline-none text-slate-800 text-sm transition-all" placeholder="Tell us about your organization and requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-all shadow-lg shadow-blue-600/30 flex items-center justify-center space-x-2">
+                            <span>Submit Inquiry</span>
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm">
+                    KS
+                </div>
+                <span class="font-bold text-white text-base">Kevin Sisk Limited</span>
+            </div>
+            <div class="text-xs text-slate-500 text-center md:text-left">
+                <p>&copy; 2026 Kevin Sisk Limited. All rights reserved. Colorado Entity ID # 20248265026.</p>
+                <p class="mt-1">Principal Office: 517 57th St, Brooklyn, NY 11220 | Registered Agent: Kevin Sisk</p>
+            </div>
+            <div class="flex space-x-4 text-slate-400 text-sm">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#services" class="hover:text-white transition-colors">Services</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu & Toast Notification -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form submission handler with toast alert instead of window.alert
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-msg');
+
+            toastMsg.textContent = `Thank you, ${name}. Your message has been received by Kevin Sisk Limited.`;
+            toast.classList.remove('translate-y-32', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+
+            document.getElementById('consultation-form').reset();
+
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-32', 'opacity-0');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
